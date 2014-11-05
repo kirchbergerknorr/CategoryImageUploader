@@ -1,0 +1,15 @@
+{
+    "name":"kirchbergerknorr/CategoryImageUploader",
+    "description": "Workaround to avoid exception '$_FILES array is empty' when assiging products to a category or creating a category with the API",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "authors": [
+        {"name": "Aleksey Razbakov", "email": "ar@kirchbergerknorr.de"}
+    ],
+    "repositories": [
+        {"type": "composer", "url": "http://packages.firegento.com"}
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

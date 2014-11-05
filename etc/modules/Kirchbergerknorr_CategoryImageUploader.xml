@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    Kirchbergerknorr
+* @package     Kirchbergerknorr_CategoryImageUploader
+* @author      Aleksey Razbakov <ar@kirchbergerknorr.de>
+* @copyright   Copyright (c) 2014 kirchbergerknorr GmbH (http://www.kirchbergerknorr.de)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Kirchbergerknorr_CategoryImageUploader>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Kirchbergerknorr_CategoryImageUploader>
+    </modules>
+</config>

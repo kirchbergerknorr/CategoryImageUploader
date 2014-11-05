@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Kirchbergerknorr
+ * @package     Kirchbergerknorr_CategoryImageUploader
+ * @author      http://stackoverflow.com/questions/9700611/exception-raised-in-varien-file-uploader-when-using-xmlrpc-to-modify-categories
+ * @author      Aleksey Razbakov <ar@kirchbergerknorr.de>
+ * @copyright   Copyright (c) 2014 kirchbergerknorr GmbH (http://www.kirchbergerknorr.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Kirchbergerknorr_CategoryImageUploader>
+            <version>0.1.0</version>
+        </Kirchbergerknorr_CategoryImageUploader>
+    </modules>
+    <global>
+        <models>
+            <CategoryImageUploader>
+                <class>Kirchbergerknorr_CategoryImageUploader_Model</class>
+            </CategoryImageUploader>
+            <catalog>
+                <rewrite>
+                    <category_attribute_backend_image>Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Image</category_attribute_backend_image>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+</config>
