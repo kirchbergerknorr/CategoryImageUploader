@@ -14,9 +14,8 @@ $installer = $this;
 
 $installer->startSetup();
 
-$installer->run(sprintf(
-    "DELETE FROM `%s` WHERE `backend_model` = 'catalog/category_attribute_backend_image'",
-    $this->getTable('eav/attribute')
-));
+$installer->run(
+    "DELETE FROM eav_attribute where `backend_model` = 'catalog/category_attribute_backend_image'"
+);
 
 $installer->endSetup();
