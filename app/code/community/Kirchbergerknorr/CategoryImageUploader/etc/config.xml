@@ -26,12 +26,5 @@
                 </rewrite>
             </catalog>
         </models>
-        <resources>
-            <kk_categoryimageuploader>
-                <setup>
-                    <module>Kirchbergerknorr_CategoryImageUploader</module>
-                </setup>
-            </kk_categoryimageuploader>
-        </resources>
     </global>
 </config>
