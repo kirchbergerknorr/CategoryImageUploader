@@ -5,7 +5,7 @@
  *
  * @category    Kirchbergerknorr
  * @package     Kirchbergerknorr_CategoryImageUploader
- * @author      http://stackoverflow.com/questions/9700611/exception-raised-in-varien-file-uploader-when-using-xmlrpc-to-modify-categories
+ * @see         http://stackoverflow.com/questions/9700611/exception-raised-in-varien-file-uploader-when-using-xmlrpc-to-modify-categories
  * @author      Aleksey Razbakov <ar@kirchbergerknorr.de>
  * @copyright   Copyright (c) 2014 kirchbergerknorr GmbH (http://www.kirchbergerknorr.de)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
