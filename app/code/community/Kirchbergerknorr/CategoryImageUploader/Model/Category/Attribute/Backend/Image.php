@@ -1,16 +1,18 @@
 <?php
-
 /**
- * Rewrite for Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Image
- *
  * @category    Kirchbergerknorr
  * @package     Kirchbergerknorr_CategoryImageUploader
- * @author      http://stackoverflow.com/questions/9700611/exception-raised-in-varien-file-uploader-when-using-xmlrpc-to-modify-categories
  * @author      Aleksey Razbakov <ar@kirchbergerknorr.de>
  * @copyright   Copyright (c) 2014 kirchbergerknorr GmbH (http://www.kirchbergerknorr.de)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
+/**
+ * Workaround to avoid exception '$_FILES array is empty' when assiging
+ * products to a category or creating a category with the API.
+ *
+ * @see http://stackoverflow.com/questions/9700611
+ */
 class Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Image
     extends Mage_Catalog_Model_Category_Attribute_Backend_Image
 {
@@ -18,6 +20,7 @@ class Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Im
      * Save uploaded file and set its name to category
      *
      * @param Varien_Object $object
+     * @return null
      */
     public function afterSave($object)
     {
@@ -30,14 +33,7 @@ class Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Im
             return;
         }
 
-        /* Workaround to avoid exception '$_FILES array is empty' when assiging
-         * products to a category or creating a category with the API.
-         * Inspired by http://www.magentocommerce.com/bug-tracking/issue/?issue=11597
-         */
-        if (!isset($_FILES) || count($_FILES) == 0)
-        {
-            return;
-        }
+        if (!isset($_FILES) || count($_FILES) == 0) return;
 
         $path = Mage::getBaseDir('media') . DS . 'catalog' . DS . 'category' . DS;
 
@@ -53,7 +49,6 @@ class Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Im
             if ($e->getCode() != Mage_Core_Model_File_Uploader::TMP_NAME_EMPTY) {
                 Mage::logException($e);
             }
-
             return;
         }
     }
