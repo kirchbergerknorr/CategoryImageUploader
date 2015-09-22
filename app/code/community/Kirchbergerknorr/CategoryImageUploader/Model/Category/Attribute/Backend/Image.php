@@ -39,7 +39,7 @@ class Kirchbergerknorr_CategoryImageUploader_Model_Category_Attribute_Backend_Im
 
         try {
             $uploader = new Mage_Core_Model_File_Uploader($this->getAttribute()->getName());
-            $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png'));
+            $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png','svg'));
             $uploader->setAllowRenameFiles(true);
             $result = $uploader->save($path);
 
